@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mari Meirelles - Aulas de Inglês</title>
+
+    <meta name="description" content="Aulas de Inglês">
+    <!-- <meta name="author" content=""> -->
+
+    <style type="text/css">
+      
+      body {
+        font-family: "Roboto", Arial, sans-serif;
+        font-size: 16px;
+        margin: 0;
+        text-align: center;
+        color: #222;
+      }
+
+      img { border: 0 }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+
+      /* HEADER */
+
+      .header {
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;  
+        min-height: 80px;
+        background-color: #222;
+        color: white;
+      }
+
+      .header a, .header a:active, .header a:hover, .header a:visited {
+        color: white;
+        text-decoration: none;
+      }
+
+      .nav {margin: auto;}
+
+      .nav a {
+        margin: auto;
+        padding: 1em;
+      }
+      .title {
+        margin: auto;
+      }
+      .title h1 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+      }
+      .title h1 small {
+        text-transform: none;
+      }
+
+      .tel {
+        margin: auto;
+        font-size: large;
+      }
+
+
+      /* SPLASH */
+
+      .splash {
+        display: flex;
+        flex-direction: column;
+        padding: 100px 0 200px; 
+        background-image: url(splash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+      }
+
+      .splash h3 {
+        font-size: 4rem;
+        margin: auto;
+        padding: 50px 0;
+      }
+      .splash p {
+        margin: auto;
+        max-width: 60%;
+        font-size: 1.4rem;
+        line-height: 1.5;
+      }
+
+
+      /* SOBRE */ 
+      .sobre {
+        margin-top: 250px;
+        display: flex;
+        flex-wrap: wrap;  
+        align-items: stretch;
+        justify-content: space-around;
+        justify-content: space-evenly;
+      }
+
+      .marifoto {
+        min-width: 300px;
+        min-height: 40vh;
+        background-image: url(mari.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        flex-basis: 45%;
+      }
+
+      .mari {
+        text-align: center;
+        flex-basis: 45%;
+        padding: 10px;
+      }
+
+      .mari h4 {
+        font-size: 2rem;
+      }
+
+      .mari hr {
+        width: 20%;
+        border: 2px solid green;
+      }
+
+      /* SERVIÇOS OFERECIDOS*/
+      .servicos-title {
+        background-color: #eee;
+        padding: 100px 0;
+        margin-top: 100px;
+      }
+
+      .servicos-title h3 {
+        font-size: 3.5rem;  
+      }
+
+      .servicos-title p {
+        margin: auto;
+        max-width: 60%;
+        font-size: 1.4rem;
+        line-height: 1.5;
+      }
+
+
+      .servico {
+        display: flex;
+        justify-content: center;
+        min-height: 40vh;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: #eee;
+      }
+
+      .servico > div {
+        flex-basis: 45%;
+      }
+
+      .bg1, .bg2, .bg3 {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-width: 300px;
+        min-height: 40vh;
+        align-self: stretch;
+      }
+
+      .bg2 {
+        order: 2; 
+      }
+
+      .bg1 {
+        background-image: url(point1.jpg);
+      }
+      .bg2 {
+        background-image: url(point2.jpg);
+      }
+      .bg3 {
+        background-image: url(point3.jpg);
+      }
+
+      .servico p {
+        margin: 40px 40px 0;
+        line-height: 1.6;
+      }
+      .servico h3 {
+        margin: 0 30px 30px ;
+        font-size: 2rem;
+      }
+
+      .text1, .text2, .text3 {
+        background-color: white;
+        padding: 20px 0;
+        align-self: stretch;
+      }
+
+      /* CALL to action */
+      .call {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        min-height: 40vh;
+        padding-top: 100px;
+        background-color: #eee;
+      }
+
+      .call p {
+        margin: 0 40px;
+        line-height: 1.6;
+        flex-basis: 50%;
+      }
+
+      .call a, .call a:active, .call a:hover, .call a:visited {
+        color: white;
+        background-color: green;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+
+      /* AULAS */
+      .aulas {
+        display: flex;
+        padding: 100px 0;
+      }
+      .aulas h3 {
+        font-size: 2rem;
+        margin: auto;
+      }
+
+
+      /* POINTS */
+
+      .points {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 100px 0;
+      }
+
+      .point {
+        flex-basis: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-width: 300px;
+      }
+
+      .point h4 {
+        font-size: 1.5rem;
+        text-align: left;
+      }
+
+      .point p {
+        text-align: left;
+        font-size: : .875;
+        line-height: 1.55;
+      }
+
+      .checkmark {
+        width: 100px;
+        height: 100px;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0id2luZG93cy0xMjUyIj8+PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNzYuODg3IDU1LjU1MiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNzYuODg3IDU1LjU1MjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnIGlkPSJMYXllcl8xNSI+PHBvbHlnb24gc3R5bGU9ImZpbGw6IzIzMUYyMDsiIHBvaW50cz0iMzQuMzczLDQ5LjU0MSA3Ni44ODcsNS44ODkgNzAuNzM5LDAgMjguNDI2LDQzLjQ1OCA2LjA3OCwyMC42MzIgMCwyNi41ODUgMjIuNDg4LDQ5LjU1NyAgICAyMi40ODgsNDkuNTU3IDI4LjUxNyw1NS41NTIgMjguNDI2LDU1LjQ2NyAyOC41MTcsNTUuNTUyIDM0LjM3Myw0OS41NDEgICIvPjwvZz48ZyBpZD0iTGF5ZXJfMSI+PC9nPjwvc3ZnPg==);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+      }
+
+      /* contato */
+
+      .contato {
+        display: flex;
+        min-height: 40vh;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .contato div {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.4;
+        color: #222
+      }
+
+      .contato a, .contato a:active, .contato a:hover, .contato a:visited {
+        text-decoration: none;
+        color: #222;
+        white-space: nowrap;
+      }
+
+      /* screen size adjustments */
+
+      @media all and (min-width:1080px) {
+        body>div{
+          padding-right: calc((100vw - 1080px)/2);
+          padding-left: calc((100vw - 1080px)/2);
+
+        }
+      }
+
+
+      @media all and (max-width:960px) {
+        .header {
+          padding-bottom: 20px;
+        }
+
+        .servico > div,
+        .mari,
+        .marifoto {
+          flex-basis: auto;
+          flex-basis: stretch;
+          flex-basis: -moz-available;
+        }
+
+        .splash {
+          padding: 50px 0;
+        }
+        .splash p {
+          max-width: max-content;
+          padding: 10px;
+        }
+        .splash h3 {
+          padding-top: 0;
+        }
+
+        .sobre {
+          margin-top: 0;  
+        }
+
+        .servicos-title {
+          padding-top: 10px;
+        }
+        
+        .servicos-title p {
+          max-width: max-content;
+        }
+
+
+        .call p {
+          flex-basis: auto;
+          flex-basis: stretch;
+          flex-basis: -moz-available;
+
+          font-size: 1.2rem;
+        }
+        .call {
+          padding-bottom: 20px;
+        }
+
+        .aulas {
+          padding: 50px 0;
+        }
+
+        .points {
+          margin-top: 0;
+        }
+
+        .point {
+          align-items: center;
+          margin-bottom: 50px;
+        }
+
+        .point h4 {
+          text-align: inherit;
+        }
+
+        .contato div{
+          font-size: 1.5rem;  
+        }
+
+        .bg2 {
+          order: inherit; 
+        }
+
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <div class="header">
+      <div class="nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <div class="title">
+        <h1>
+          Mari Meirelles
+          <br>
+          <small>Aulas de inglês</small>
+        </h1>
+      </div>
+      <div class="tel">
+        Fone: <a href="tel:+5512997887141">(12) 99788 7141</a>
+      </div>
+    </div>
+
+    <div class="splash">
+      <h3>Mari Meirelles</h3>
+      
+      <p>
+        <strong>Aprenda Inglês</strong> de forma prática e fácil. <strong>Aulas</strong> particulares <strong>individuais</strong> ou em <strong>grupo</strong> de até cinco pessoas. Aulas <strong>presenciais em Ubatuba</strong> ou <strong>online para todo o Brasil</strong>. <strong>Preços acessíveis</strong> e <strong>métodos eficientes</strong> levando em conta as necessidades e o dia a dia de cada aluno.        
+      </p>
+    </div>  
+
+    <div class="sobre" id="sobre">
+      <div class="marifoto"></div>
+      <div class="mari">
+        <h4>Um pouquinho sobre a Mari</h4>
+        <hr>
+        <p>
+          Meu nome é Mariana. Nasci no Brasil, mas sou também cidadã Britânica e por 15 anos vivi no exterior. A maior parte desse tempo passei no Reino Unido, mas morei também em vários outros países como Itália, Dinamarca e Moçambique.
+        </p>
+        <p>
+          Me formei em farmácia na USP e fiz uma pós graduação na FGV, mas optei por sair da caixinha e seguir uma estrada para, acima de tudo, me desenvolver como ser humano.
+        </p>
+        <p>
+          Durante esse tempo fora, fiz um mestrado em uma das melhores universidades de Londres e trabalhei nas mais variadas empresas e funções. Todavia, minha paixão pelo mundo não para por aí. Amo viajar. Conheço mais de 50 países e espero poder conhecer muito mais. Me encanta poder estar inserida em uma nova cultura, provar novos sabores e experimentar novas sensações.
+        </p>
+
+        <p>
+          E só consegui tudo isso pois um dia tive a oportunidade de aprender inglês. Ter conhecimento desse idioma abre portas e pontes, e nos conecta com o mundo. Acredito que todos nós temos o potencial de aprender uma nova língua, por isso, neste momento, quero contribuir para que mais pessoas tenham a oportunidade que eu tive de me comunicar em inglês e expandir horizontes.
+        </p>
+        <p>
+          All and all, sou uma mulher viajante que ama a vida. 
+        </p>
+      </div>  
+    </div>  
+
+    <div class="servicos-title" id="servicos">
+      <h3>Serviços Oferecidos</h3>
+      <p>
+        Opções de cursos que respeitam seu tempo, seu estilo de aprender e seu bolso. Sem taxa de matrícula nem custo com livro didático.
+      </p>
+    </div>
+
+    <div class="servico">
+      <div class="bg1"></div>
+      <div class="text1">
+        <h3>Aulas particulares presenciais (individual)</h3>
+        <p>Aulas particulares oferecem melhor personalização do conteúdo para adequá-lo ao seu objetivo, além de mais flexibilidade de horário e maior comodidade.
+        <br>Investimento: R$35 por hora
+        <br>Recomendado: duas horas por semana</p>
+      </div>
+    </div>
+    <div class="servico">
+      <div class="bg2"></div>
+      <div class="text2">
+        <h3>Aulas presenciais em grupo (max 5 pessoas)</h3>
+        <p>Junte seus amigos e formem um grupo. O ideal é que todos tenham níveis parecidos de conhecimento do da língua inglesa.
+        Investimento (valor por grupo):
+        <br>Dois estudante - R$45/hora;
+        <br>Três estudantes - R$55/hora;
+        <br>Quatro/cinco estudantes - R$70/hora
+        <br>Sugerido: duas horas por semana</p>
+      </div>
+    </div>
+    <div class="servico">
+      <div class="bg3"></div>
+      <div class="text3">
+        <h3>Aulas particulares a distância</h3>
+        <p>Aprenda inglês sem sair de casa. Voce só precisa de um computador, smartphone ou tablet e uma boa conexão de internet para ter suas aulas online. E a qualidade não deixa a desejar - as aulas serão individualizadas e a abordagem será baseada em seus objetivos, assim como as aulas presenciais.
+        <br>Investimento: R$35 por hora
+        <br>Recomendado: duas horas por semana</p>
+      </div>
+    </div>
+
+    <div class="call">
+      <p>
+        Se você mora em Ubatuba, ligue agora mesmo para saber mais sobre as aulas presenciais. E se você não mora em Ubatuba, ligue também. Podemos agendar aulas online.
+        <br>
+        <strong>A primeira aula é grátis.</strong>  
+      </p>
+      <a href="tel:+5512997887141">(12) 99788 7141</a>
+    </div> 
+
+
+    <div class="aulas">
+      <h3>Aulas práticas e objetivas</h3>
+    </div> 
+
+    <div class="points">
+      <div class="point">
+        <div class="checkmark"></div>
+        <h4>Avaliação Inicial</h4>
+        <p>Juntamente com a aluno, a abordagem da aula será escolhida baseada em uma avaliação inicial para verificar a proficiência no idioma e o propósito do aluno para aprender inglês.</p>
+      </div>
+      <div class="point">
+        <div class="checkmark"></div>
+        <h4>Abordagem Personalizada</h4>
+        <p>A abordagem pode ser baseada em tarefas ou projetos, concentrando-se nas habilidades e competências de que os alunos realmente precisam.</p>
+      </div>
+      <div class="point">
+        <div class="checkmark"></div>
+        <h4>Suporte Integral</h4>
+        <p>A professora irá trazer o material didático a ser utilizado em cada aula e irá sugerir links e sites online gratuitos para serem usados como suporte ao curso. </p>
+      </div>
+    </div>
+
+    <div class="contato" id="contato">
+      <div>Fone: <a href="tel:+5512997887141">(12) 99788 7141</a></div>
+      <div>WhatsApp: <a href="https://wa.me/447412865856">+44 7412 865856</a></div>
+      <div><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#114;&#105;&#97;&#110;&#97;&#122;&#109;&#101;&#105;&#114;&#101;&#108;&#108;&#101;&#115;&commat;&#103;&#109;&#97;&#105;&#108;&period;&#99;&#111;&#109;">&#109;&#97;&#114;&#105;&#97;&#110;&#97;&#122;&#109;&#101;&#105;&#114;&#101;&#108;&#108;&#101;&#115;&commat;&#103;&#109;&#97;&#105;&#108;&period;&#99;&#111;&#109;</a></div>
+    </div>
+  </body>
+</html>
